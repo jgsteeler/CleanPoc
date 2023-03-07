@@ -3,10 +3,10 @@ using Leads.Core.Repositories.Query.Base;
 
 namespace Leads.Core.Repositories.Query;
 
-public interface ILeadQueryRepository : IQueryRepository<Lead>
+public interface ILeadQueryRepository : IQueryRepository<Entities.Leads>
 {
-    Task<Lead> GetLeadByIdAsync(int id);
-    Task<Lead> GetLeadByEmailAsync(string email);
+    Task<Entities.Leads> GetLeadByIdAsync(int id);
+    Task<Entities.Leads> GetLeadByEmailAsync(string email);
     
     
 }

@@ -3,7 +3,7 @@ using Leads.Core.Repositories.Command.Base;
 
 namespace Leads.Core.Repositories.Command;
 
-public interface ILeadCommandRepository : ICommandRepository<Lead>
+public interface ILeadCommandRepository : ICommandRepository<Entities.Leads>
 {
     
 }

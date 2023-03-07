@@ -2,7 +2,7 @@ using Leads.Core.Entities.Base;
 
 namespace Leads.Core.Entities;
 
-public class Lead : BaseEntity
+public class Leads : BaseEntity
 {
     public string FirstName { get; set; }
     public string LastName { get; set; }
