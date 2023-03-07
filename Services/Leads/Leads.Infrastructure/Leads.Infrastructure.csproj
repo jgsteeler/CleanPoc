@@ -22,4 +22,8 @@
     <PackageReference Include="microsoft.extensions.configuration.abstractions" Version="7.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Leads.Core\Leads.Core.csproj" />
+  </ItemGroup>
+
 </Project>
