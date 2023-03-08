@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{AD08E87C-D6E7-487E-92ED-BA03E9F886ED}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AD08E87C-D6E7-487E-92ED-BA03E9F886ED}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Leads", "Leads", "{CE6554C5-68AB-4570-A6B8-92FA43DE1DB6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CleanPoc", "CleanPoc", "{CE6554C5-68AB-4570-A6B8-92FA43DE1DB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leads.Api", "Services\Leads\Leads.Api\Leads.Api.csproj", "{CB66E1B3-0472-4B80-B9DA-25401850F708}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanPoc.Api", "src\CleanPoc\CleanPoc.Api\CleanPoc.Api.csproj", "{CB66E1B3-0472-4B80-B9DA-25401850F708}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leads.Application", "Services\Leads\Leads.Application\Leads.Application.csproj", "{D83A73F2-81D9-49DF-B24A-6E283D6D1FA8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanPoc.Application", "src\CleanPoc\CleanPoc.Application\CleanPoc.Application.csproj", "{D83A73F2-81D9-49DF-B24A-6E283D6D1FA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leads.Core", "Services\Leads\Leads.Core\Leads.Core.csproj", "{8D443945-F67D-4F23-B110-DC00CA023656}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanPoc.Core", "src\CleanPoc\CleanPoc.Core\CleanPoc.Core.csproj", "{8D443945-F67D-4F23-B110-DC00CA023656}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leads.Infrastructure", "Services\Leads\Leads.Infrastructure\Leads.Infrastructure.csproj", "{079E7E9D-14B4-4708-965B-8AE52135709E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanPoc.Infrastructure", "src\CleanPoc\CleanPoc.Infrastructure\CleanPoc.Infrastructure.csproj", "{8538A955-50D1-4FDA-A36E-DED9C7CD22D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,16 +36,16 @@ Global
 		{8D443945-F67D-4F23-B110-DC00CA023656}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D443945-F67D-4F23-B110-DC00CA023656}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D443945-F67D-4F23-B110-DC00CA023656}.Release|Any CPU.Build.0 = Release|Any CPU
-		{079E7E9D-14B4-4708-965B-8AE52135709E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{079E7E9D-14B4-4708-965B-8AE52135709E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{079E7E9D-14B4-4708-965B-8AE52135709E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{079E7E9D-14B4-4708-965B-8AE52135709E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8538A955-50D1-4FDA-A36E-DED9C7CD22D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8538A955-50D1-4FDA-A36E-DED9C7CD22D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8538A955-50D1-4FDA-A36E-DED9C7CD22D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8538A955-50D1-4FDA-A36E-DED9C7CD22D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CE6554C5-68AB-4570-A6B8-92FA43DE1DB6} = {AD08E87C-D6E7-487E-92ED-BA03E9F886ED}
 		{CB66E1B3-0472-4B80-B9DA-25401850F708} = {CE6554C5-68AB-4570-A6B8-92FA43DE1DB6}
 		{D83A73F2-81D9-49DF-B24A-6E283D6D1FA8} = {CE6554C5-68AB-4570-A6B8-92FA43DE1DB6}
 		{8D443945-F67D-4F23-B110-DC00CA023656} = {CE6554C5-68AB-4570-A6B8-92FA43DE1DB6}
-		{079E7E9D-14B4-4708-965B-8AE52135709E} = {CE6554C5-68AB-4570-A6B8-92FA43DE1DB6}
+		{8538A955-50D1-4FDA-A36E-DED9C7CD22D3} = {CE6554C5-68AB-4570-A6B8-92FA43DE1DB6}
 	EndGlobalSection
 EndGlobal
