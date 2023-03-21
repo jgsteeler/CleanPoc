@@ -1,17 +1,44 @@
-using System.Reflection;
-using CleanPoc.Application.Command.Leads;
-using CleanPoc.Core.Repositories.Command.Base;
-using CleanPoc.Core.Repositories.Command.Leads;
-using CleanPoc.Core.Repositories.Query.Base;
-using CleanPoc.Core.Repositories.Query.Leads;
-using CleanPoc.Infrastructure.Data;
-using CleanPoc.Infrastructure.Repositories.Command.Base;
-using CleanPoc.Infrastructure.Repositories.Command.Leads;
-using CleanPoc.Infrastructure.Repositories.Query.Base;
-using CleanPoc.Infrastructure.Repositories.Query.Leads;
-using MediatR;
-using Microsoft.EntityFrameworkCore;
 
+using Microsoft.Extensions.Hosting;
+
+using Microsoft.AspNetCore.Hosting;
+using Serilog;
+using Serilog.Core;
+using Serilog.Events;
+
+namespace CleanPoc.Api;
+
+public static class Program
+{
+    public static void Main(string[] args)
+    {
+        CreateHostBuilder(args).Build().Run();
+    }
+
+    private static IHostBuilder CreateHostBuilder(string[] args) =>
+        Host.CreateDefaultBuilder(args)
+            .ConfigureLogging((context, builder) =>
+            {
+                Log.Logger = 
+                    new LoggerConfiguration()
+                    .Enrich.FromLogContext()
+                    .Enrich.WithProperty("Application", context.HostingEnvironment.ApplicationName)
+                    .Enrich.WithProperty("Environment", context.HostingEnvironment.EnvironmentName)
+                    .WriteTo.Console()
+                    
+                    //.WriteTo.ApplicationInsights()
+                    .CreateLogger();
+                
+                
+                builder.AddSerilog();
+                
+            })
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.UseStartup<Startup>();
+            });
+    
+/*
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -48,3 +75,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+*/
